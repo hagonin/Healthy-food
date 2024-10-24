@@ -1,0 +1,32 @@
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Dependency directories
+jspm_packages/
+bower_components/
+
+# Compiled CSS (optional, if you want to avoid committing compiled files)
+css/*.css
+css/*.css.map
+
+# Sass cache
+.sass-cache/
+
+# Environment variables
+.env
+
+# Build output
+/dist/
+/build/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Miscellaneous
+*.swp
