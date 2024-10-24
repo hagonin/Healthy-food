@@ -1,0 +1,1039 @@
+@import 'base';
+
+// <!-- ===================== HOME PAGE==================== -->
+// <!-- ======= HEADER ======= -->
+
+// Button Jointoday
+.join-today-btn {
+    font-family: $jointoday;
+    font-size: 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    background: $red-1;
+    color: $white;
+    border-radius: 50px;
+    margin-left: 22px;
+    padding: 0.5rem 1.5rem;
+    transition: 0.3s;
+    display: inline-block;
+
+    &:hover {
+        background: $red-2;
+        color: $white;
+        text-decoration: none;
+    }
+}
+
+.header {
+    background: $white;
+    transition: all 0.5s;
+    z-index: 1000;
+    padding: 10px 0;
+    box-shadow: 0px 0 18px rgba(55, 66, 59, 0.08);
+
+    .container {
+        .logo {
+            width: 13%;
+        }
+    }
+}
+
+// -----------------------Navigation menu---------------
+// Version desktop
+.navbar {
+    padding: 0;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        list-style: none;
+        align-items: center;
+    }
+
+    li {
+        position: relative;
+
+        &:hover {
+            >a {
+                color: $black;
+                border-color: $black;
+            }
+        }
+    }
+
+    >ul {
+        >li {
+            position: relative;
+            padding: 4px 5px 2px 10px;
+        }
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1rem;
+        color: $black;
+        transition: 0.2s;
+        padding: 2px 2px;
+        border-bottom: 1px solid $white;
+
+        &:hover {
+            color: $black;
+            border-color: $black;
+        }
+    }
+
+    i {
+        @include font-style(14, 19.6, 0);
+        font-family: $main-font;
+        margin-right: 5px;
+    }
+
+    &:hover {
+        color: $black;
+    }
+
+    .active {
+        color: $black;
+        border-color: $black;
+
+        &:focus {
+            color: $black;
+            border-color: $black;
+        }
+    }
+}
+
+// --Version mobile----
+.mobile-nav-toggle {
+    color: $black;
+    font-size: 1.75rem;
+    cursor: pointer;
+    display: none;
+    line-height: 0;
+    transition: 0.5s;
+
+}
+
+@media (max-width: 991px) {
+    .mobile-nav-toggle {
+        display: block;
+    }
+
+    .navbar ul {
+        display: none;
+    }
+}
+
+.navbar-mobile {
+
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: $grey;
+    transition: 0.3s;
+    z-index: 999;
+
+    .mobile-nav-toggle {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+
+    ul {
+        display: block;
+        position: absolute;
+        top: 55px;
+        right: 15px;
+        bottom: 15px;
+        left: 15px;
+        padding: 10px 0;
+        background-color: $white;
+        overflow-y: auto;
+        transition: 0.3s;
+    }
+
+    >ul {
+        >li {
+            padding: 0;
+        }
+    }
+
+    a {
+        padding: 10px 20px;
+        font-size: 0.94rem;
+        color: $black;
+        border: none;
+
+        &:focus {
+            padding: 10px 20px;
+            font-size: 15px;
+            color: $grey-1;
+            border: none;
+        }
+
+        &:hover {
+            color: $black;
+        }
+    }
+
+    .active {
+        color: $black;
+    }
+
+    li {
+        &:hover {
+            >a {
+                color: $black;
+            }
+        }
+    }
+
+    .getstarted {
+        margin: 15px;
+
+        &:focus {
+            margin: 15px;
+        }
+    }
+}
+
+// <!-- ======= HERO SECTION ======= -->
+.campaign-public {
+    width: 100vw;
+    background-size: cover;
+    margin-top: 3.5em;
+}
+
+// <!-- ======= End HERO SECTION ======= -->
+
+// <!-- ======= ABOUT SECTION ======= -->
+.welcome-section {
+    .content {
+        width: 60%;
+        margin: auto;
+
+        strong {
+            font-weight: bold;
+        }
+
+        a {
+            color: $red-2;
+        }
+    }
+
+    .video-block {
+        width: 100%;
+        max-width: 45rem;
+        margin: auto;
+        margin-bottom: 2rem;
+        border-radius: 5px;
+    }
+}
+
+
+.find-group {
+    display: block;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    background: $green;
+    text-align: center;
+    margin: 0.3125em 25em;
+    padding: 0.625em 1.256em;
+    overflow: hidden;
+    z-index: 1;
+    a {
+        text-decoration: none;
+    }
+    &__button span {
+        color: $white;
+        font-family: $jointoday;
+        font-size: 1.5rem;
+    }
+
+    &:hover {
+        background-color: $red-2;        
+    }
+}
+
+// -----------------------End ABOUT section---------------
+// -----------------------INTRODUCTION--------------
+.intro {
+    padding: 2rem 2rem 0;
+
+    .intro-block {
+        color: $t-purple-1 !important;
+        padding: 0 32px;
+        margin: 0 250px;
+
+        &__text {
+            font-family: $jointoday;
+            font-size: 3.5rem;
+            line-height: 3rem;
+            margin: 25px 0 25px;
+        }
+
+        >p {
+            color: $t-purple-1 !important;
+            font-size: 1.3rem;
+        }
+    }
+
+}
+
+// Carousel in Introduction
+
+.events {
+    width: 70%;
+    margin: auto;
+    font-family: $main-font;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 5rem;
+        left: 5rem;
+        bottom: 0;
+    }
+
+    .container {
+        position: relative;
+        top: 10px;
+        padding-top: 1.2rem;
+        background-color: $rose-2;
+    }
+
+    // Not found event-carousel ??????
+    // .events-carousel {
+    // 	padding: 30px;
+    // }
+    .event-item {
+        color: $black;
+
+        h3 {
+            font-weight: 600;
+            font-size: 26px;
+            color: $t-purple-1;
+        }
+
+        p {
+            font-family: $main-font;
+            font-weight: 400;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .swiper-pagination {
+        margin-top: 20px;
+        position: relative;
+
+        .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            background-color: $green-1;
+            opacity: 1;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: $green;
+        }
+    }
+}
+
+//*---------------End INTRODUCTION----------------*
+//*----------------PERSUADE------------------------*
+.persuade-block {
+    text-align: center;
+    padding: 30px 0;
+    color: $t-purple-1;
+
+    .persuade-block-text {
+        p {
+            font-family: $jointoday;
+            font-size: 4em;
+
+        }
+    }
+}
+
+.persuade-content {    
+    justify-content: center;
+    align-content: center;  
+    
+    .course-items {
+        background-color: $grey-2;
+        padding: 1.5rem;
+        border-radius: 0.7rem;
+        border: 1px solid $grey-3;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.content {
+    color: $black;
+    .top-content {
+        padding-bottom: 1.5rem;
+        p {
+            font-size: 18px;
+            font-weight: 500;
+        }
+        h2 {
+            font-size: 3rem !important;
+            line-height: .3rem ;
+        }
+        
+    }
+    &__description {
+        font-size: 1.045rem;
+        font-weight: 390;
+        line-height: 1.6rem;
+        text-align: center;
+        margin: auto;
+        flex: 1 1 auto;
+    }
+
+    .final-content {
+        p {
+            margin-top: 1rem;
+            margin-bottom: 1.5rem;
+            font-family: $campaign-font;
+            .price-label {
+                font-weight: 900;
+                color: $green;
+            }
+            span {
+                font-size: 1.375rem;
+                line-height: 2.03rem;
+            }
+        }
+
+        .weekly-pricing {
+            font-family: $campaign-font;
+            margin-top: -1rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+    }
+}
+
+.digital {
+    h2 {
+        color: $blue !important;
+        line-height: .8rem !important;
+    }
+    &__button1 {
+        color: $blue;
+        border: 1px solid $blue;
+        &:hover {
+            background-color: $blue;
+            border: 1px solid $blue;
+        }
+    }
+    &__button2 {
+        background-color: $blue;
+        border: 1px solid $blue;
+        &:hover {
+            background-color: $t-blue;
+            border: 1px solid $t-blue;
+        }
+    }
+}
+
+.controls {
+    .btn-outline-danger {
+        border: 1px solid $rose;
+        &:hover {
+            background-color: $red;
+            border: 1px solid $red;
+        }
+    }
+    .btn-danger {
+        background-color: $rose;
+        border: 1px solid $rose;
+        &:hover {
+            background-color: $red;
+            border: 1px solid $red;
+        }
+    }
+    
+}
+
+// *----------------End PERSUADE---------------------*
+// *-------FORM AND SIGNUP---------------------------*
+
+.newsletter {   
+    background-color: $grey-1;
+    width: 70vw;
+    height: 450px;
+    margin: auto;
+    &__img {
+        height: 500px;
+        width: 40%;
+        
+    }
+    &__form {
+        margin: 3.125rem auto;       
+        font-family: $main-font !important;        
+    }   
+}
+
+.contact-form {   
+   color:$grey-3;
+    .submit-btn {
+        display: inline-block;
+        background-color: $red;
+        color: $white;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 16px;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 5px;
+        width: 12.5em;
+        cursor: pointer;  
+        
+        &:hover {
+            background-color: $green;
+        }
+    }
+}
+
+// *---------End FORM & SIGNUP-----------------------*
+// *------------RECIPES------------------------------*
+
+.img-card {
+    width: 24rem;
+    height: 24rem;
+    object-fit: cover;
+}
+#recipes {
+    background-color: $grey-1;
+}
+.recipes {
+    flex: 1 1 auto;
+    .img-card {
+        height:22rem;
+    }
+
+    .card-title {
+        font-family: $jointoday;
+        color:$red;
+        font-size: 1.5rem;
+    }
+    p:last-child, .card-text {
+        font-family: $main-font;
+        font-weight: 400;
+    }
+    i {
+        font-size: 1.2rem;
+        padding-top: 0.2rem;        
+        }
+    .card:hover {
+        box-shadow: 5px 6px 6px 2px $grey;
+        transform: scale(1.02)
+    }
+}
+
+// *------------SEARCH BAR----------------------*
+.horizontal-search-bar {
+    margin-top: 1rem;
+
+    .search-bar {
+        background-color: $white;
+        border: 1px solid $grey;
+        justify-content: space-evenly;
+        // flex-direction: column;    
+
+        padding: 1.5rem 2rem;
+        border-radius: 0.09375rem 0.09375rem 0 0;
+
+        &__text {
+            flex-basis: 50%;
+
+            p {
+                font-family: $jointoday;
+                font-size:2rem;
+                color:$red;
+            }
+        }
+
+        &__container {
+            flex-basis: 50%;
+        }
+    }
+}
+
+// Animation search input
+.search-input {
+    width: 100%;
+    padding: 12px 24px;
+    background-color: transparent;
+    transition: transform 250ms ease-in-out;
+    @include font-style(14, 18, 300);
+    color: $grey-3;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    background-position: 100% center;
+    border-radius: 0px;
+    border: 1px solid transparent;
+    border-bottom: 1px solid $grey-3;
+    transition: all 250ms ease-in-out;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+
+    &:placeholder {
+        color: color($grey-3 a(0.8));
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+    }
+
+    &:hover,
+    &:focus {
+        padding: 12px 0;
+        outline: 0;        
+        background-position: 95% center;
+    }
+}
+//  *------------End Search bar---------------------------*
+//  *------------SOCIALS-----------------------------*
+.socials {
+    &__text {
+        text-align: center;
+        color: $t-purple-1;
+        p {        
+            font-family: $campaign-font;   
+            font-size: 22px;
+            margin-bottom: -1rem;
+        }
+        p:last-child {
+            margin: 1rem;
+        }
+
+        .social-title {
+            font-family: $jointoday;            
+            font-size: 55px;            
+        }
+    }
+
+    &__gallery {
+        .gallery-item {
+            overflow: hidden;
+            border-right: 3px solid $white;
+            border-bottom: 3px solid $white;
+
+            img {
+                transition: all ease-in-out 0.4s;
+                object-fit: cover;
+            }
+
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+.carousel-nav-icon {
+    height: 55px;
+    width: 55px;
+}
+
+.carousel-item {
+
+    .col,
+    .col-md {
+        margin: 8px;
+        height: 300px;
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
+.social-button {
+    color: $black;
+    padding: 0.9rem;
+}
+//  *------------End Socials--------------------------*
+// *---------------FOOTER-----------------------------*
+.footer {
+    background-color: $purple;
+    padding: 10px 0px 25px 0px;
+
+    .bottom_border {
+        border-top: 1px solid $grey-3;
+        border-bottom: 1px solid $grey-3;
+        padding-bottom: 0.9rem;
+    }
+
+    h2,
+    h5 {
+        color: $white !important;
+        font: 700 $campaign-font;
+    }
+
+    li {
+        font: 200 1rem $main-font;        
+    }
+
+    h4 {
+        font-family: $jointoday;
+        color: $red;
+        margin-top: -0.5em;
+    }
+
+    .footer-magazine {
+        padding-top: 1rem;
+        transform: rotate(8deg);
+
+        img {
+            width: 75%;
+        }
+    }
+}
+
+.footer_ul {
+    margin: 0px;
+    list-style-type: none;
+    font-size: 14px;
+    padding: 0px 0px 10px 0px;
+
+    li {
+        padding: 0px 0px 5px 0px;
+
+        a {
+            color: $grey;
+            text-decoration: none;
+            &:hover {
+                color: $white;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.pt2 {
+    padding-top: 40px;
+    margin-bottom: 20px;
+}
+
+.social_footer_ul {
+    @include flexbox(flex);
+    width: 50%;
+    margin-left: 13.5rem;
+
+    li {
+        list-style-type: none;
+        margin-left: 4rem;
+        padding-top: 0.625rem;
+        float: left;
+
+        a {
+            font-size: 2.2em;
+            color: $grey-2;
+            padding: 0.5rem;
+            float: left;
+        }
+
+        i {
+            width: 1.25rem;
+            height: 1.25rem;
+            text-align: center;
+        }
+    }
+}
+
+// .footer-find-out {
+//     line-height: 1.65rem;
+//     font-weight: 650;
+//     color: $red;
+//     padding: 0.6rem 2rem;
+// 	margin-top: 1rem;;
+//     margin-left: 2rem;
+// 	&:hover {
+// 		background-color: $red-1;
+// 	}
+// }
+//  *------------End Footer---------------------------*
+
+// *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+// *-*<====== EXPERT ADVICES PAGE==========>*
+// *-*-*-*-*-*-**-*-*-*-*-*-*-*-*-*-*-*-*-**
+
+//*---------Bar Public----------------*
+.bar-public {
+    font-family: $campaign-font;
+    @include flexbox(flex);
+    flex-direction: column;
+    margin-top: 3.1rem;
+    padding-bottom: 1rem;
+    &__main {
+        margin-top: 2rem;
+    }
+    h3 {
+        font-size: 2rem;
+        line-height: 1rem;        
+        font-family: $font-title ;
+        color: $black;
+    }
+    h2 {
+        line-height: 1 ;
+    }
+
+    &__text {
+        width: 50%;
+        text-align: center;
+        font-size: 1.2rem;
+        padding-bottom: 1rem;
+        line-height: 1.5;
+    }
+}
+
+.what-eat-title {
+    padding: 1.5rem;
+    width: 40%;
+    text-align: center;
+    color: $t-purple;
+
+    a {
+        font-weight: 500;
+        ;
+        color: $t-purple;
+        text-decoration: underline solid $t-blue 1px;
+    }
+}
+
+//*---------End Bar Public----------------*
+//*------------- Free Food-----------------*
+.molecule-free-food {
+    background-color: $grey-1;
+    font-family: $campaign-font;
+    padding: 3rem;
+
+    &__head {
+        @include flexbox(flex);
+        flex-direction: column;
+        color: $t-purple;
+
+        p:first-child {
+            font-family: $campaign-font;
+            font-size: 2rem;
+        }
+
+        p:last-child {
+            font-family: $jointoday;
+            font-size: 4rem;
+            margin-top: -2.75rem;
+        }
+    }
+    .container {
+        .free-food {
+            width: 100em;
+            height: 560px;
+        }
+    
+        p {
+            @include font-style(16, 25.6, 300);
+            font-family: $campaign-font;
+        }
+    
+        .free-img {
+            margin-right: 1rem;
+        }
+    
+        .healthy {
+            justify-content: space-between;
+        }
+    }
+}
+
+
+
+//*-------------End Free Food-----------------*
+// ----------------Nutrition-----------------*
+.section-title {
+    text-align: center;
+    padding-bottom: 30px;
+
+    h2 {
+        margin: 15px 0 0 0;
+        font-size: 32px;
+        font-weight: 700;
+        color: $red;
+    }
+
+    h2 span {
+        color: $green;
+    }
+
+    p {
+        margin: 15px auto 0 auto;
+        font-weight: 300;
+        font-size: 1.3rem;
+        color: $black-1;
+    }
+}
+
+.nutrition {
+    overflow: hidden;
+
+    .nav-tabs,
+    .nav-link {
+        border: 0;
+        color: $purple;
+    }
+
+    .nav-link:hover {
+        color: $purple;
+        background-color: $rose-1;
+        border-radius: 70px 10px;
+    }
+
+    .nav-link:active {
+        color: $green-1;
+        border-color: $green-1;
+    }
+
+    .tab-pane.active {
+        animation: fadeIn 0.5s ease-out;
+    }
+
+    .details {
+        h3 {
+            font-size: 26px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: $red;
+        }
+
+        p {
+            color: $purple;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+//*-------------End Nutrition-----------------*
+// *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+// *-*<====== RECIPES PAGE==========>*
+// *-*-*-*-*-*-**-*-*-*-*-*-*-*-*-*-*-*-*-**
+
+.bar-recipes {
+    width: 100%;
+
+    h2 {
+        @include font-style(32, 45, 900);
+        font-family: $campaign-font;
+    }
+
+    h3,
+    h6 {
+        font-size: 4rem;
+        line-height: 3.5rem;
+        font-family: $jointoday;
+        color: $red;
+    }
+
+    p {
+        font-size: 1.3rem;
+        font-family: $campaign-font !important;
+    }
+}
+
+// *---------------Search bar---------------*
+.search {
+    &__container {
+        width: 40%;
+        margin: auto;
+        padding-top: 1.4rem;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 12px 24px;
+
+        background-color: transparent;
+        transition: transform 250ms ease-in-out;
+        font-size: 14px;
+        line-height: 18px;
+
+        color: $grey-3;
+        background-color: transparent;
+        /*         background-image: url(http://mihaeltomic.com/codepen/input-search/ic_search_black_24px.svg); */
+
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-size: 18px 18px;
+        background-position: 95% center;
+        border-radius: 50px;
+        border: 1px solid $grey-3;
+        transition: all 250ms ease-in-out;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+
+        &::placeholder {
+            color: color($grey-3 a(0.8));
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        &:hover,
+        &:focus {
+            padding: 12px 0;
+            outline: 0;
+            border: 1px solid transparent;
+            border-bottom: 1px solid $grey-3;
+            border-radius: 0;
+            background-position: 100% center;
+        }
+    }
+}
+// *--------------End Search bar------------*
+// *--------------Gallery--------------------*
+.gallery-items {
+    
+    color: $black !important;
+    a {
+        text-decoration: none;
+        color: unset;
+    }
+    .card-body-recipes {
+        margin-top: 54px;
+        &__chocolate {
+            margin-top: 2rem !important;
+        }
+    }
+    &__button {
+        font-family: $main-font;
+        
+    }
+    span {
+        font-family:$main-font;
+    }
+    button {
+        margin-top: 2em;
+    }
+    &__detail:hover {
+        box-shadow: 5px 6px 6px 2px $grey;
+        transform: scale(1.02)
+    }
+}
+// *---------------End Gallery-------------*

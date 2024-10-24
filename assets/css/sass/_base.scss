@@ -1,0 +1,153 @@
+//variables, mixins, typography or utility classes
+// Variables
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500;700&family=Source+Serif+Pro&display=swap" rel="stylesheet');
+
+
+// Font Variables 
+$main-font : 'Roboto',sans-serif; //300,400,500,700
+$campaign-font:'Source Serif Pro', serif;
+$jointoday: 'Dancing Script',sans-serif;
+$font-title: 'Playfair Display'; //700
+
+// Background 
+$white: #fff;
+$grey:#dad8e4;
+$grey-1:#faf6f4;
+$grey-2: #efefef;
+$grey-3:#6666;
+$grey-4:#4444;
+$green: #64b326;
+$green-1:#6d7f52;
+$blue: #2C98c8;
+$rose: #ce2a60;
+$rose-1:#ffc6be;
+$rose-2:#FEEBD6;
+$red:#d2202f;
+$red-2:#be0626;
+$red-1:#d3072a;
+$purple:#39303C;
+$black:#333;
+$black-1:#292929;
+
+// Typography
+$t-grey:#d8d8d6;
+$t-grey-1:#6666;
+$t-blue:#2bb0e9;
+$t-purple:#551a8B;
+$t-purple-1:#310757;
+$t-purple-2:#453e79;
+$t-purple-3:#453e79;
+
+// Mixins . EX: @include responsive-ratio(16,9);
+// @function calculateRem($size) {
+//     $remSize: $size / 16px;
+//     @return $remSize * 1rem;
+//   }
+
+@mixin font-style($font-size, $line-height: normal, $font-weight: normal) {
+    font-size: $font-size/16;
+    // font-size: calculateRem($size);
+    // font-size: $font-size * 0.16rem;
+    // example using rem values and 62.5% font-size so 1rem = 16px
+
+    @if $line-height==normal {
+        line-height: normal;
+    }
+
+    @else {
+        line-height: $line-height / $font-size;
+    }
+
+    @if $font-weight==normal {
+        font-weight: normal;
+    }
+
+    @else {
+        font-weight: $font-weight;
+    }
+}
+
+  
+@mixin flexbox($flex){
+    display:$flex;
+    align-items: center;
+	justify-content: center;
+}
+
+
+
+//FONT STYLE
+.main-text {
+    @include font-style(16, 27.2, 300);  
+    font-family:$main-font;
+    color:$black;
+}
+
+.white-text {
+    @include font-style(16,27.2,300);
+    font-family:$main-font; 
+    color:$white;
+}
+
+.text-heading {    
+    // @include font-style(14,20.8,700);
+    font-size: 1.89rem;
+    line-height: 1.3rem;     
+    font-family: $font-title;
+}
+
+.text-heading-lg {
+    @include font-style(32,41,700);
+    font-family: $font-title;
+}
+
+.text-new {
+    font-size: 4.5rem;
+    font-family:$jointoday !important;  
+    color: $red; 
+}
+.text-confident {    
+    font-size:32px;
+    font-family: $campaign-font;
+}
+
+.text-title-box {
+    font-size:1.6rem;
+    font-family: $jointoday;
+    color: $red-2 !important;
+    margin-bottom: 1rem;
+}
+
+.text-detail-box {
+    @include font-style(16, 25.6, 300);
+    font-family: $campaign-font;
+}
+
+.text-paragraph {
+    @include font-style(15,26,300);
+    font-family: $main-font;
+}
+// Section general
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header, section, footer {
+	padding: 20px 0;
+	// overflow: visible;
+    // margin-bottom: 5px;
+}
+
+// Container, Box
+.wrapper {    
+    margin: auto;
+	padding: 0;   
+}
+
+.box {
+    background-color: $white;
+    border: 1px solid $t-grey;
+    padding: 1.7rem;
+}
