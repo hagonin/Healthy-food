@@ -247,9 +247,11 @@
     padding: 0.625em 1.256em;
     overflow: hidden;
     z-index: 1;
+
     a {
         text-decoration: none;
     }
+
     &__button span {
         color: $white;
         font-family: $jointoday;
@@ -257,7 +259,7 @@
     }
 
     &:hover {
-        background-color: $red-2;        
+        background-color: $red-2;
     }
 }
 
@@ -365,10 +367,10 @@
     }
 }
 
-.persuade-content {    
+.persuade-content {
     justify-content: center;
-    align-content: center;  
-    
+    align-content: center;
+
     .course-items {
         background-color: $grey-2;
         padding: 1.5rem;
@@ -378,23 +380,34 @@
         img {
             width: 100%;
         }
+
+        display: flex;
+        flex-direction: column;
+        height: 100%;
     }
 }
 
 .content {
     color: $black;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
     .top-content {
         padding-bottom: 1.5rem;
+
         p {
             font-size: 18px;
             font-weight: 500;
         }
+
         h2 {
             font-size: 3rem !important;
-            line-height: .3rem ;
+            line-height: .3rem;
         }
-        
+
     }
+
     &__description {
         font-size: 1.045rem;
         font-weight: 390;
@@ -402,6 +415,7 @@
         text-align: center;
         margin: auto;
         flex: 1 1 auto;
+        flex-grow: 1;
     }
 
     .final-content {
@@ -409,15 +423,19 @@
             margin-top: 1rem;
             margin-bottom: 1.5rem;
             font-family: $campaign-font;
+
             .price-label {
                 font-weight: 900;
                 color: $green;
             }
+
             span {
                 font-size: 1.375rem;
                 line-height: 2.03rem;
             }
         }
+
+        margin-top: auto;
 
         .weekly-pricing {
             font-family: $campaign-font;
@@ -434,17 +452,21 @@
         color: $blue !important;
         line-height: .8rem !important;
     }
+
     &__button1 {
         color: $blue;
         border: 1px solid $blue;
+
         &:hover {
             background-color: $blue;
             border: 1px solid $blue;
         }
     }
+
     &__button2 {
         background-color: $blue;
         border: 1px solid $blue;
+
         &:hover {
             background-color: $t-blue;
             border: 1px solid $t-blue;
@@ -455,43 +477,49 @@
 .controls {
     .btn-outline-danger {
         border: 1px solid $rose;
+
         &:hover {
             background-color: $red;
             border: 1px solid $red;
         }
     }
+
     .btn-danger {
         background-color: $rose;
         border: 1px solid $rose;
+
         &:hover {
             background-color: $red;
             border: 1px solid $red;
         }
     }
-    
+
 }
 
 // *----------------End PERSUADE---------------------*
 // *-------FORM AND SIGNUP---------------------------*
 
-.newsletter {   
+.newsletter {
     background-color: $grey-1;
     width: 70vw;
     height: 450px;
     margin: auto;
+
     &__img {
         height: 500px;
         width: 40%;
-        
+
     }
+
     &__form {
-        margin: 3.125rem auto;       
-        font-family: $main-font !important;        
-    }   
+        margin: 3.125rem auto;
+        font-family: $main-font !important;
+    }
 }
 
-.contact-form {   
-   color:$grey-3;
+.contact-form {
+    color: $grey-3;
+
     .submit-btn {
         display: inline-block;
         background-color: $red;
@@ -503,8 +531,8 @@
         border: none;
         border-radius: 5px;
         width: 12.5em;
-        cursor: pointer;  
-        
+        cursor: pointer;
+
         &:hover {
             background-color: $green;
         }
@@ -519,28 +547,35 @@
     height: 24rem;
     object-fit: cover;
 }
+
 #recipes {
     background-color: $grey-1;
 }
+
 .recipes {
     flex: 1 1 auto;
+
     .img-card {
-        height:22rem;
+        height: 22rem;
     }
 
     .card-title {
         font-family: $jointoday;
-        color:$red;
+        color: $red;
         font-size: 1.5rem;
     }
-    p:last-child, .card-text {
+
+    p:last-child,
+    .card-text {
         font-family: $main-font;
         font-weight: 400;
     }
+
     i {
         font-size: 1.2rem;
-        padding-top: 0.2rem;        
-        }
+        padding-top: 0.2rem;
+    }
+
     .card:hover {
         box-shadow: 5px 6px 6px 2px $grey;
         transform: scale(1.02)
@@ -565,8 +600,8 @@
 
             p {
                 font-family: $jointoday;
-                font-size:2rem;
-                color:$red;
+                font-size: 2rem;
+                color: $red;
             }
         }
 
@@ -605,28 +640,31 @@
     &:hover,
     &:focus {
         padding: 12px 0;
-        outline: 0;        
+        outline: 0;
         background-position: 95% center;
     }
 }
+
 //  *------------End Search bar---------------------------*
 //  *------------SOCIALS-----------------------------*
 .socials {
     &__text {
         text-align: center;
         color: $t-purple-1;
-        p {        
-            font-family: $campaign-font;   
+
+        p {
+            font-family: $campaign-font;
             font-size: 22px;
             margin-bottom: -1rem;
         }
+
         p:last-child {
             margin: 1rem;
         }
 
         .social-title {
-            font-family: $jointoday;            
-            font-size: 55px;            
+            font-family: $jointoday;
+            font-size: 55px;
         }
     }
 
@@ -670,6 +708,7 @@
     color: $black;
     padding: 0.9rem;
 }
+
 //  *------------End Socials--------------------------*
 // *---------------FOOTER-----------------------------*
 .footer {
@@ -689,7 +728,7 @@
     }
 
     li {
-        font: 200 1rem $main-font;        
+        font: 200 1rem $main-font;
     }
 
     h4 {
@@ -720,6 +759,7 @@
         a {
             color: $grey;
             text-decoration: none;
+
             &:hover {
                 color: $white;
                 text-decoration: none;
@@ -783,17 +823,20 @@
     flex-direction: column;
     margin-top: 3.1rem;
     padding-bottom: 1rem;
+
     &__main {
         margin-top: 2rem;
     }
+
     h3 {
         font-size: 2rem;
-        line-height: 1rem;        
+        line-height: 1rem;
         font-family: $font-title ;
         color: $black;
     }
+
     h2 {
-        line-height: 1 ;
+        line-height: 1;
     }
 
     &__text {
@@ -842,21 +885,22 @@
             margin-top: -2.75rem;
         }
     }
+
     .container {
         .free-food {
             width: 100em;
             height: 560px;
         }
-    
+
         p {
             @include font-style(16, 25.6, 300);
             font-family: $campaign-font;
         }
-    
+
         .free-img {
             margin-right: 1rem;
         }
-    
+
         .healthy {
             justify-content: space-between;
         }
@@ -931,6 +975,7 @@
         }
     }
 }
+
 //*-------------End Nutrition-----------------*
 // *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 // *-*<====== RECIPES PAGE==========>*
@@ -1006,34 +1051,43 @@
         }
     }
 }
+
 // *--------------End Search bar------------*
 // *--------------Gallery--------------------*
 .gallery-items {
-    
+
     color: $black !important;
+
     a {
         text-decoration: none;
         color: unset;
     }
+
     .card-body-recipes {
         margin-top: 54px;
+
         &__chocolate {
             margin-top: 2rem !important;
         }
     }
+
     &__button {
         font-family: $main-font;
-        
+
     }
+
     span {
-        font-family:$main-font;
+        font-family: $main-font;
     }
+
     button {
         margin-top: 2em;
     }
+
     &__detail:hover {
         box-shadow: 5px 6px 6px 2px $grey;
         transform: scale(1.02)
     }
 }
+
 // *---------------End Gallery-------------*
