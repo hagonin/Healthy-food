@@ -1,7 +1,7 @@
 # **Healthy Food - A Static HTML & Sass Project** 🍏🥗  
 
 ## **🌍 Live Demo**  
-🚀 **[View the Live Website](https://healthy-food-38.netlify.app/recipes#)**  
+🚀 **[View the Live Website](https://healthy-food-38.netlify.app/)**  
 
 ---
 
